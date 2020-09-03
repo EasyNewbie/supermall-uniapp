@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "nav-bar": "/components/common/navbar/NavBar",
+    "bw-swiper": "/components/common/bw-swiper/bw-swiper",
+    "recommend-view": "/pages/index/childComps/RecommendView",
+    "feature-view": "/pages/index/childComps/FeatureView"
+  }
+}

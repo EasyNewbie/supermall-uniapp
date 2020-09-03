@@ -1,0 +1,1 @@
+<view class="content"><bw-swiper style="width:100%;" vue-id="8dd740cc-1" swiperList="{{swiperList}}" bind:__l="__l"></bw-swiper><recommend-view vue-id="8dd740cc-2" recommends="{{recommends}}" bind:__l="__l"></recommend-view><feature-view vue-id="8dd740cc-3" bind:__l="__l"></feature-view></view>

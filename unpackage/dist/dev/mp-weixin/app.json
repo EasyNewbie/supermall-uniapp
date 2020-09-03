@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/my/my",
+    "components/content/web-view/web-view"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F1F1F1",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#0e0e0e",
+    "selectedColor": "#007AFF",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "static/img/tabs/home.png",
+        "selectedIconPath": "static/img/tabs/home@selected.png"
+      },
+      {
+        "text": "分类",
+        "pagePath": "pages/category/category",
+        "iconPath": "static/img/tabs/category.png",
+        "selectedIconPath": "static/img/tabs/category@selected.png"
+      },
+      {
+        "text": "购物车",
+        "pagePath": "pages/cart/cart",
+        "iconPath": "static/img/tabs/cart.png",
+        "selectedIconPath": "static/img/tabs/cart@selected.png"
+      },
+      {
+        "text": "个人中心",
+        "pagePath": "pages/my/my",
+        "iconPath": "static/img/tabs/my.png",
+        "selectedIconPath": "static/img/tabs/my@selected.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
