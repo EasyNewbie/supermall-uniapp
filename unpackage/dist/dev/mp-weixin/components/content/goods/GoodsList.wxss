@@ -1,0 +1,9 @@
+
+.goods-list{
+}
+.goods-item {
+	display: inline-block;
+	width: 48%;
+	margin: 0 1%;
+}
+

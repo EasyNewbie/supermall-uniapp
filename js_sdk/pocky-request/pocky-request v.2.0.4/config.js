@@ -13,7 +13,7 @@ export const globalInterceptor = {
  * `header` 中`content-type`设置特殊参数 或 配置其他会导致触发 跨域 问题，出现跨域会直接进入响应拦截器的catch函数中
  */
 export const config = {
-  baseURL: "http://123.207.32.32:8000/api/x6",
+  baseURL: "http://123.207.32.32:8000/api/h8",
   header: {
     // 'X-Auth-Token': 'xxxx',
     contentType: "application/x-www-form-urlencoded"
@@ -33,7 +33,7 @@ export const config = {
  */
 globalInterceptor.request.use(
   config => {
-    console.log("is global request interceptor");
+    // console.log("is global request interceptor（全局请求拦截）");
 
     return config;
   },

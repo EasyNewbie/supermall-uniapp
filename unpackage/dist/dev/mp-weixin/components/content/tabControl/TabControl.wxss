@@ -1,0 +1,25 @@
+
+.tab-control.data-v-be888064{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	text-align: center;
+	font-size: 15px;
+}
+.tab-control-item.data-v-be888064{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	height: 40px;
+	line-height: 40px;
+}
+.tab-control-item ._span.data-v-be888064 {
+	padding: 5px;
+}
+.active.data-v-be888064{
+	color: #ff5777;
+}
+.active ._span.data-v-be888064 {
+	border-bottom: 3px solid #ff8198;
+}
+

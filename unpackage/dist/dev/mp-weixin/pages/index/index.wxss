@@ -61,6 +61,89 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 	.content {
 		display: flex;
 		flex-direction: column;
@@ -87,4 +170,12 @@
 		font-size: 36rpx;
 		color: #8f8f94;
 }
+.tab-control {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 43px;
+		background-color: #fff;
+		z-index: 50;
+}
+	
 

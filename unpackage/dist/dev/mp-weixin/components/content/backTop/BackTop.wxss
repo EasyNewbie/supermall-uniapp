@@ -1,0 +1,12 @@
+
+.back-top.data-v-76c2a62c {
+	position: fixed;
+	right: 10rpx;
+	bottom: 100rpx;
+	z-index: 60;
+}
+.back-top image.data-v-76c2a62c {
+	width: 90rpx;
+	height: 90rpx;
+}
+

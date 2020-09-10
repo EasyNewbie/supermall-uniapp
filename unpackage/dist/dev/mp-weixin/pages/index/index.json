@@ -1,9 +1,13 @@
 {
   "navigationBarTitleText": "首页",
   "enablePullDownRefresh": true,
+  "onReachBottomDistance": 126,
   "usingComponents": {
     "nav-bar": "/components/common/navbar/NavBar",
     "bw-swiper": "/components/common/bw-swiper/bw-swiper",
+    "tab-control": "/components/content/tabControl/TabControl",
+    "goods-list": "/components/content/goods/GoodsList",
+    "back-top": "/components/content/backTop/BackTop",
     "recommend-view": "/pages/index/childComps/RecommendView",
     "feature-view": "/pages/index/childComps/FeatureView"
   }

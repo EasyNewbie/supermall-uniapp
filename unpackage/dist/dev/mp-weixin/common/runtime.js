@@ -12,7 +12,7 @@
 /******/ 		var moduleId, chunkId, i = 0, resolves = [];
 /******/ 		for(;i < chunkIds.length; i++) {
 /******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId]) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 				resolves.push(installedChunks[chunkId][0]);
 /******/ 			}
 /******/ 			installedChunks[chunkId] = 0;
@@ -48,6 +48,7 @@
 /******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
 /******/ 			}
 /******/ 		}
+/******/
 /******/ 		return result;
 /******/ 	}
 /******/
@@ -104,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/common/bw-swiper/bw-swiper":1,"components/common/navbar/NavBar":1,"pages/index/childComps/FeatureView":1,"pages/index/childComps/RecommendView":1};
+/******/ 		var cssChunks = {"components/common/bw-swiper/bw-swiper":1,"components/common/navbar/NavBar":1,"components/content/backTop/BackTop":1,"components/content/goods/GoodsList":1,"components/content/tabControl/TabControl":1,"pages/index/childComps/FeatureView":1,"pages/index/childComps/RecommendView":1,"components/content/goods/GoodsListItem":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/common/bw-swiper/bw-swiper":"components/common/bw-swiper/bw-swiper","components/common/navbar/NavBar":"components/common/navbar/NavBar","pages/index/childComps/FeatureView":"pages/index/childComps/FeatureView","pages/index/childComps/RecommendView":"pages/index/childComps/RecommendView"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/common/bw-swiper/bw-swiper":"components/common/bw-swiper/bw-swiper","components/common/navbar/NavBar":"components/common/navbar/NavBar","components/content/backTop/BackTop":"components/content/backTop/BackTop","components/content/goods/GoodsList":"components/content/goods/GoodsList","components/content/tabControl/TabControl":"components/content/tabControl/TabControl","pages/index/childComps/FeatureView":"pages/index/childComps/FeatureView","pages/index/childComps/RecommendView":"pages/index/childComps/RecommendView","components/content/goods/GoodsListItem":"components/content/goods/GoodsListItem"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
@@ -170,6 +171,8 @@
 /******/ 				}
 /******/ 				script.src = jsonpScriptSrc(chunkId);
 /******/
+/******/ 				// create error before stack unwound to get useful stacktrace later
+/******/ 				var error = new Error();
 /******/ 				onScriptComplete = function (event) {
 /******/ 					// avoid mem leaks in IE.
 /******/ 					script.onerror = script.onload = null;
@@ -179,7 +182,8 @@
 /******/ 						if(chunk) {
 /******/ 							var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 /******/ 							var realSrc = event && event.target && event.target.src;
-/******/ 							var error = new Error('Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')');
+/******/ 							error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+/******/ 							error.name = 'ChunkLoadError';
 /******/ 							error.type = errorType;
 /******/ 							error.request = realSrc;
 /******/ 							chunk[1](error);

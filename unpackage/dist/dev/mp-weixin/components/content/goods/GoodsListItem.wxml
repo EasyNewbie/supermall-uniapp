@@ -1,0 +1,1 @@
+<view class="goods-item"><image src="{{goodsItem.show.img}}"></image><view class="goods-info"><view class="_p">{{goodsItem.title}}</view><label class="price _span">{{goodsItem.price}}</label><label class="collect _span">{{goodsItem.cfav}}</label></view></view>

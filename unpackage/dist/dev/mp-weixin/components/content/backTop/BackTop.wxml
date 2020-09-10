@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['getTop',['$event']]]]]}}" class="back-top data-v-76c2a62c" bindtap="__e"><image src="../../../static/img/commom/top.png" mode class="data-v-76c2a62c"></image></view>
